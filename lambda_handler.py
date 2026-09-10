@@ -514,10 +514,10 @@ app = create_app()
 handler = Mangum(app, lifespan="auto")
 
 
-if __name__ == "__main__":
-    import uvicorn
+# if __name__ == "__main__":
+#     import uvicorn
 
-    port = int(os.getenv("PORT", "8000"))
+#     port = int(os.getenv("PORT", "8000"))
     
-    logger.info(f"Server running on http://localhost:{port}")
-    uvicorn.run(app, host="127.0.0.1", port=port)
+#     logger.info(f"Server running on http://localhost:{port}")
+#     uvicorn.run(app, host="127.0.0.1", port=port)

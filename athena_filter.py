@@ -36,7 +36,7 @@ class AthenaQueryTimeout(RuntimeError):
 
 def _qualified_column(column: str) -> str:
     """SQL reference for a registry-resolved column on the primary table."""
-    return f"{BASE_ALIAS}.{REGISTRY.quoted(column)}"
+    return f"{REGISTRY.quoted(column)}"
 
 
 def build_query(
@@ -64,7 +64,7 @@ def build_query(
     fetch_size = int(limit) + 1
     sql = (
         f"SELECT DISTINCT {target} AS VAL "
-        f"FROM {_FULL_TABLE} {BASE_ALIAS} "
+        f"FROM {_FULL_TABLE}"
         f"WHERE {where_sql} "
         f"OFFSET {int(max(0, offset))} LIMIT {fetch_size}"
     )

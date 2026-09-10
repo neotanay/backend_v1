@@ -37,7 +37,7 @@ _THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 COLUMN_MAP_PATH = os.getenv("COLUMN_MAP_PATH", os.path.join(_THIS_DIR, "resources", "column_map.json"))
 COLUMN_MAP_KEY = os.getenv("COLUMN_MAP_KEY", "")
 S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME")
-ENABLE_LOCAL_FILE_READ = os.getenv("ENABLE_LOCAL_FILE_READ", False)
+ENABLE_LOCAL_FILE_READ = os.getenv("ENABLE_LOCAL_FILE_READ", True)
 COLUMN_MAP_ORIENTATION = os.getenv("COLUMN_MAP_ORIENTATION", "column_to_param").lower()
 _IDENT_RE = re.compile(r"^[A-Za-z][A-Za-z0-9_$#]{0,127}$")
 
@@ -57,6 +57,7 @@ class ColumnInfo:
 
 def _read_local_or_s3(local_path: str, s3_key: str, required: bool) -> Optional[dict]:   
     if os.path.exists(local_path) and ENABLE_LOCAL_FILE_READ:
+        print("etes")
         source = f"local file {local_path}"
         try:
             with open(local_path, "r", encoding="utf-8") as handle:
