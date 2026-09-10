@@ -1,0 +1,3994 @@
+{
+  "case_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_id"
+    },
+    {
+      "table": "sv_lab_details",
+      "alias": "l",
+      "column": "case_id"
+    }
+  ],
+  "case_num": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_num"
+    }
+  ],
+  "other_global_num": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "other_global_num"
+    }
+  ],
+  "reporting_country_info": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "reporting_country_info"
+    }
+  ],
+  "latest_date_submitted": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "latest_date_submitted"
+    }
+  ],
+  "followup_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "followup_date"
+    }
+  ],
+  "init_receipt_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "init_receipt_date"
+    }
+  ],
+  "init_receipt_wk": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "init_receipt_wk"
+    }
+  ],
+  "safety_received_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "safety_received_date"
+    }
+  ],
+  "followup_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "followup_yn"
+    }
+  ],
+  "report_to_reg_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "report_to_reg_yn"
+    }
+  ],
+  "report_to_fda_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "report_to_fda_yn"
+    }
+  ],
+  "adverse_event_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "adverse_event_yn"
+    }
+  ],
+  "drug_complaint_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_complaint_ynu"
+    }
+  ],
+  "literature_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "literature_yn"
+    }
+  ],
+  "parent_child_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "parent_child_yn"
+    }
+  ],
+  "pregnancy_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "pregnancy_yn"
+    }
+  ],
+  "med_confirmed_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "med_confirmed_yn"
+    }
+  ],
+  "legal_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "legal_yn"
+    }
+  ],
+  "case_blind_status_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_blind_status_yn"
+    }
+  ],
+  "serious_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "serious_yn"
+    }
+  ],
+  "case_significant_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_significant_yn"
+    }
+  ],
+  "case_with_nonmed_prod_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_with_nonmed_prod_yn"
+    }
+  ],
+  "case_with_medicinal_prod_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_with_medicinal_prod_yn"
+    }
+  ],
+  "case_with_study_drug_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_with_study_drug_yn"
+    }
+  ],
+  "case_with_otc_prod_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_with_otc_prod_yn"
+    }
+  ],
+  "reported_causes_of_death_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "reported_causes_of_death_yn"
+    }
+  ],
+  "case_fatal_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_fatal_yn"
+    }
+  ],
+  "social_media_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "social_media_yn"
+    }
+  ],
+  "sv_social_media_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "sv_social_media_yn"
+    }
+  ],
+  "case_classification": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_classification"
+    }
+  ],
+  "case_invalid_reason": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_invalid_reason"
+    }
+  ],
+  "causes_of_death": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "causes_of_death"
+    }
+  ],
+  "report_type": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "report_type"
+    }
+  ],
+  "case_outcome": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_outcome"
+    }
+  ],
+  "close_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "close_date"
+    }
+  ],
+  "case_quality_category": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_quality_category"
+    }
+  ],
+  "case_quality_score": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_quality_score"
+    }
+  ],
+  "patient_subjuct_number": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "patient_subjuct_number"
+    }
+  ],
+  "caw_seq_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "caw_seq_id"
+    }
+  ],
+  "icu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "icu"
+    }
+  ],
+  "non_interventional_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "non_interventional_yn"
+    }
+  ],
+  "protocol_num": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "protocol_num"
+    }
+  ],
+  "site_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "site_id"
+    }
+  ],
+  "case_seriousness": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_seriousness"
+    }
+  ],
+  "case_death": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_death"
+    }
+  ],
+  "events_fatal_outcome": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "events_fatal_outcome"
+    }
+  ],
+  "prim_src_country": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "prim_src_country"
+    }
+  ],
+  "country_occurred": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "country_occurred"
+    }
+  ],
+  "age": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "age"
+    }
+  ],
+  "local_ref_num": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "local_ref_num"
+    }
+  ],
+  "age_group": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "age_group"
+    }
+  ],
+  "age_in_years": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "age_in_years"
+    }
+  ],
+  "disp_age": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "disp_age"
+    }
+  ],
+  "disp_age_group": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "disp_age_group"
+    }
+  ],
+  "disp_patient_gender": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "disp_patient_gender"
+    }
+  ],
+  "gender": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "gender"
+    }
+  ],
+  "patient_weight_lbs": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "patient_weight_lbs"
+    }
+  ],
+  "ae_preferred_terms": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ae_preferred_terms"
+    }
+  ],
+  "reported_terms": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "reported_terms"
+    }
+  ],
+  "first_dose_latencies_days": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "first_dose_latencies_days"
+    }
+  ],
+  "last_dose_latencies_days": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "last_dose_latencies_days"
+    }
+  ],
+  "event_dates": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_dates"
+    }
+  ],
+  "event_reaction_seriousness": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_reaction_seriousness"
+    }
+  ],
+  "event_reaction_durations": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_reaction_durations"
+    }
+  ],
+  "event_outcomes": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_outcomes"
+    }
+  ],
+  "socs": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "socs"
+    }
+  ],
+  "event_durations_in_days": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_durations_in_days"
+    }
+  ],
+  "hlgts": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "hlgts"
+    }
+  ],
+  "hlts": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "hlts"
+    }
+  ],
+  "receipt_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "receipt_date"
+    }
+  ],
+  "safety_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "safety_date"
+    }
+  ],
+  "rechallenges": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "rechallenges"
+    }
+  ],
+  "dechallenges": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dechallenges"
+    }
+  ],
+  "drug_indication_pts": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_indication_pts"
+    }
+  ],
+  "drug_reported_indications": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_reported_indications"
+    }
+  ],
+  "drug_formulation": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_formulation"
+    }
+  ],
+  "drug_admin_routes": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_admin_routes"
+    }
+  ],
+  "drug_doses": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_doses"
+    }
+  ],
+  "dose_units": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dose_units"
+    }
+  ],
+  "dose_frequencies": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dose_frequencies"
+    }
+  ],
+  "dose_start_dates": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dose_start_dates"
+    }
+  ],
+  "dose_stop_dates": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dose_stop_dates"
+    }
+  ],
+  "dose_durations": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dose_durations"
+    }
+  ],
+  "lot_numbers": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "lot_numbers"
+    }
+  ],
+  "lot_exp_dates": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "lot_exp_dates"
+    }
+  ],
+  "reporter_casualities": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "reporter_casualities"
+    }
+  ],
+  "company_casualities": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "company_casualities"
+    }
+  ],
+  "reporter_types": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "reporter_types"
+    }
+  ],
+  "patient_height_in": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "patient_height_in"
+    }
+  ],
+  "rank1_ae_pref_term": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "rank1_ae_pref_term"
+    }
+  ],
+  "rank1_ae_llt_term": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "rank1_ae_llt_term"
+    }
+  ],
+  "rank1_reported_term": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "rank1_reported_term"
+    }
+  ],
+  "rank1_event_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "rank1_event_date"
+    }
+  ],
+  "rank1_outcome": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "rank1_outcome"
+    }
+  ],
+  "rank1_serious_ae_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "rank1_serious_ae_yn"
+    }
+  ],
+  "rank1_ae_soc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "rank1_ae_soc"
+    }
+  ],
+  "cm_cases": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "cm_cases"
+    }
+  ],
+  "med_hist_comments": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "med_hist_comments"
+    }
+  ],
+  "ib_labels": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ib_labels"
+    }
+  ],
+  "jppi_labels": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "jppi_labels"
+    }
+  ],
+  "uspi_labels": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "uspi_labels"
+    }
+  ],
+  "llt_names": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "llt_names"
+    }
+  ],
+  "effective_start_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "effective_start_date"
+    }
+  ],
+  "effective_end_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "effective_end_date"
+    }
+  ],
+  "date_refreshed": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "date_refreshed"
+    }
+  ],
+  "multiple_patient_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "multiple_patient_yn"
+    }
+  ],
+  "latencies_in_days": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "latencies_in_days"
+    }
+  ],
+  "date_reporting": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "date_reporting"
+    }
+  ],
+  "ccds_labels": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ccds_labels"
+    }
+  ],
+  "other_id_num_all": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "other_id_num_all"
+    }
+  ],
+  "gcc_generic_names": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "gcc_generic_names"
+    }
+  ],
+  "reported_drug_names": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "reported_drug_names"
+    }
+  ],
+  "all_suspect_products": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "all_suspect_products"
+    }
+  ],
+  "all_case_products": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "all_case_products"
+    }
+  ],
+  "primary_suspect_drug": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "primary_suspect_drug"
+    }
+  ],
+  "other_suspect_drugs": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "other_suspect_drugs"
+    }
+  ],
+  "conmeds": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "conmeds"
+    }
+  ],
+  "gcc_prod_names": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "gcc_prod_names"
+    }
+  ],
+  "gcc_prod_fmly_names": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "gcc_prod_fmly_names"
+    }
+  ],
+  "gcc_prod_fmly_codes": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "gcc_prod_fmly_codes"
+    }
+  ],
+  "original_prod_codes": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "original_prod_codes"
+    }
+  ],
+  "gcc_rb_prod_codes": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "gcc_rb_prod_codes"
+    }
+  ],
+  "gcc_reg_classes": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "gcc_reg_classes"
+    }
+  ],
+  "reporting_country": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "reporting_country"
+    }
+  ],
+  "country_mapped": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "country_mapped"
+    }
+  ],
+  "us_vs_ex_us": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "us_vs_ex_us"
+    }
+  ],
+  "region_mapped": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "region_mapped"
+    }
+  ],
+  "narrative_seq_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "narrative_seq_id"
+    }
+  ],
+  "narrative": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "narrative"
+    }
+  ],
+  "agent_notes": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "agent_notes"
+    }
+  ],
+  "case_serious_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_serious_yn"
+    }
+  ],
+  "case_fatal_y": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_fatal_y"
+    }
+  ],
+  "patient_gender": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "patient_gender"
+    }
+  ],
+  "case_event_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_event_id"
+    }
+  ],
+  "event_row_num": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_row_num"
+    }
+  ],
+  "case_id_pt_code": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_id_pt_code"
+    }
+  ],
+  "event_occured_country": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_occured_country"
+    }
+  ],
+  "event_death_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_death_ynu"
+    }
+  ],
+  "event_med_serious_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_med_serious_ynu"
+    }
+  ],
+  "event_hospital_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_hospital_ynu"
+    }
+  ],
+  "event_life_threat_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_life_threat_ynu"
+    }
+  ],
+  "event_disabling_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_disabling_ynu"
+    }
+  ],
+  "event_inter_req_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_inter_req_ynu"
+    }
+  ],
+  "event_other_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_other_yn"
+    }
+  ],
+  "event_rpt_serious_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_rpt_serious_ynu"
+    }
+  ],
+  "event_seriousness_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_seriousness_ynu"
+    }
+  ],
+  "event_emergency_room_visit_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_emergency_room_visit_yn"
+    }
+  ],
+  "medically_confirmed_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "medically_confirmed_ynu"
+    }
+  ],
+  "llt_cd": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "llt_cd"
+    }
+  ],
+  "pt_code": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "pt_code"
+    }
+  ],
+  "reported_term": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "reported_term"
+    }
+  ],
+  "desc_coded": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "desc_coded"
+    }
+  ],
+  "soc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "soc"
+    }
+  ],
+  "ime_ast_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ime_ast_id"
+    }
+  ],
+  "watchlist_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "watchlist_yn"
+    }
+  ],
+  "dme_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dme_yn"
+    }
+  ],
+  "dme_ast_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dme_ast_id"
+    }
+  ],
+  "event_receipt_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_receipt_date"
+    }
+  ],
+  "event_severity_reporter": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_severity_reporter"
+    }
+  ],
+  "onset_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "onset_date"
+    }
+  ],
+  "onset_date_partial": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "onset_date_partial"
+    }
+  ],
+  "onset_delay_unit_e2b": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "onset_delay_unit_e2b"
+    }
+  ],
+  "onset_latency_unit_e2b": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "onset_latency_unit_e2b"
+    }
+  ],
+  "onset_minutes": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "onset_minutes"
+    }
+  ],
+  "onset_res": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "onset_res"
+    }
+  ],
+  "pat_has_past_history": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "pat_has_past_history"
+    }
+  ],
+  "treatment_received_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "treatment_received_ynu"
+    }
+  ],
+  "event_intensity": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_intensity"
+    }
+  ],
+  "event_frequency": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_frequency"
+    }
+  ],
+  "event_outcome": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_outcome"
+    }
+  ],
+  "efficacy": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "efficacy"
+    }
+  ],
+  "disease_progression": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "disease_progression"
+    }
+  ],
+  "adverse_withdrawal": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "adverse_withdrawal"
+    }
+  ],
+  "event_rel_study": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_rel_study"
+    }
+  ],
+  "event_rel_study_rptd": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_rel_study_rptd"
+    }
+  ],
+  "drop_frm_study": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drop_frm_study"
+    }
+  ],
+  "eroom_visit": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "eroom_visit"
+    }
+  ],
+  "phyofc_visit": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "phyofc_visit"
+    }
+  ],
+  "event_infection": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_infection"
+    }
+  ],
+  "dict_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dict_id"
+    }
+  ],
+  "dict_key": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dict_key"
+    }
+  ],
+  "pt_name": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "pt_name"
+    }
+  ],
+  "hlt_code": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "hlt_code"
+    }
+  ],
+  "hlt_name": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "hlt_name"
+    }
+  ],
+  "hlgt_code": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "hlgt_code"
+    }
+  ],
+  "hlgt_name": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "hlgt_name"
+    }
+  ],
+  "soc_code": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "soc_code"
+    }
+  ],
+  "soc_name": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "soc_name"
+    }
+  ],
+  "mh_pt_name": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "mh_pt_name"
+    }
+  ],
+  "mh_pt_code": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "mh_pt_code"
+    }
+  ],
+  "mh_soc_name": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "mh_soc_name"
+    }
+  ],
+  "smq_name": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "smq_name"
+    }
+  ],
+  "smq_narrow_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "smq_narrow_yn"
+    }
+  ],
+  "mh_cond_type": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "mh_cond_type"
+    }
+  ],
+  "custom_meddra": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "custom_meddra"
+    }
+  ],
+  "custom_meddra_category": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "custom_meddra_category"
+    }
+  ],
+  "cmq_narrow_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "cmq_narrow_yn"
+    }
+  ],
+  "product_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "product_id"
+    }
+  ],
+  "drug_row_num": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_row_num"
+    }
+  ],
+  "medicinal_prod_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "medicinal_prod_id"
+    }
+  ],
+  "compdd_prod": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "compdd_prod"
+    }
+  ],
+  "biosimilar": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "biosimilar"
+    }
+  ],
+  "case_drug_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_drug_id"
+    }
+  ],
+  "prod_cd": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "prod_cd"
+    },
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "prod_cd"
+    }
+  ],
+  "product_auth_type": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "product_auth_type"
+    }
+  ],
+  "combination_product": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "combination_product"
+    }
+  ],
+  "drug_not_admin": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_not_admin"
+    }
+  ],
+  "product_cntry": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "product_cntry"
+    }
+  ],
+  "batch_lot": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "batch_lot"
+    }
+  ],
+  "exp_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "exp_date"
+    }
+  ],
+  "package_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "package_id"
+    }
+  ],
+  "gestation_period_unit": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "gestation_period_unit"
+    }
+  ],
+  "gestation_period_unit_desc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "gestation_period_unit_desc"
+    }
+  ],
+  "product_obtained_cntry": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "product_obtained_cntry"
+    }
+  ],
+  "product_auth_country": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "product_auth_country"
+    }
+  ],
+  "product_action_taken": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "product_action_taken"
+    }
+  ],
+  "prod_lic_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "prod_lic_id"
+    }
+  ],
+  "last_update_time": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "last_update_time"
+    }
+  ],
+  "product_name": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "product_name"
+    }
+  ],
+  "drug_reported": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_reported"
+    }
+  ],
+  "product_coded": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "product_coded"
+    }
+  ],
+  "family_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "family_id"
+    }
+  ],
+  "study_drug_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "study_drug_ynu"
+    }
+  ],
+  "route_desc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "route_desc"
+    }
+  ],
+  "parent_route_desc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "parent_route_desc"
+    }
+  ],
+  "dose_duration": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dose_duration"
+    }
+  ],
+  "dose_duration_sec": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dose_duration_sec"
+    }
+  ],
+  "dose_unit": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dose_unit"
+    }
+  ],
+  "dose_frequency": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dose_frequency"
+    }
+  ],
+  "accidental_exposure": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "accidental_exposure"
+    }
+  ],
+  "dose_formulation_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dose_formulation_id"
+    }
+  ],
+  "dose_formulation": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dose_formulation"
+    }
+  ],
+  "first_dose_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "first_dose_date"
+    }
+  ],
+  "last_dose_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "last_dose_date"
+    }
+  ],
+  "first_dose_partial": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "first_dose_partial"
+    }
+  ],
+  "first_dose_res": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "first_dose_res"
+    }
+  ],
+  "last_dose_partial": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "last_dose_partial"
+    }
+  ],
+  "last_dose_res": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "last_dose_res"
+    }
+  ],
+  "first_dose_delay": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "first_dose_delay"
+    }
+  ],
+  "last_dose_latency": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "last_dose_latency"
+    }
+  ],
+  "doses_to_prim_event": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "doses_to_prim_event"
+    }
+  ],
+  "prod_code_status": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "prod_code_status"
+    }
+  ],
+  "drug_interaction_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_interaction_ynu"
+    }
+  ],
+  "drug_abuse_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_abuse_ynu"
+    }
+  ],
+  "drug_counterfeit_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_counterfeit_ynu"
+    }
+  ],
+  "drug_beyond_expiry_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_beyond_expiry_ynu"
+    }
+  ],
+  "drug_by_father_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_by_father_ynu"
+    }
+  ],
+  "drug_med_err_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_med_err_ynu"
+    }
+  ],
+  "drug_misuse_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_misuse_ynu"
+    }
+  ],
+  "drug_occ_exp_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_occ_exp_ynu"
+    }
+  ],
+  "drug_off_label_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_off_label_ynu"
+    }
+  ],
+  "drug_overdose_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_overdose_ynu"
+    }
+  ],
+  "drug_tampering_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_tampering_ynu"
+    }
+  ],
+  "first_sus_prod_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "first_sus_prod_ynu"
+    }
+  ],
+  "dose_ongoing_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dose_ongoing_yn"
+    }
+  ],
+  "k_manu_prod_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "k_manu_prod_yn"
+    }
+  ],
+  "company_drug_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "company_drug_yn"
+    }
+  ],
+  "product_name_gcc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "product_name_gcc"
+    }
+  ],
+  "trade_name_gcc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "trade_name_gcc"
+    }
+  ],
+  "family_cd_gcc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "family_cd_gcc"
+    }
+  ],
+  "region_gcc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "region_gcc"
+    }
+  ],
+  "market_status_gcc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "market_status_gcc"
+    }
+  ],
+  "prod_family_trade_name_gcc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "prod_family_trade_name_gcc"
+    }
+  ],
+  "product_line_gcc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "product_line_gcc"
+    }
+  ],
+  "product_category_gcc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "product_category_gcc"
+    }
+  ],
+  "franchise_gcc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "franchise_gcc"
+    }
+  ],
+  "brand_gcc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "brand_gcc"
+    }
+  ],
+  "product_family_gcc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "product_family_gcc"
+    }
+  ],
+  "product_name_argus": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "product_name_argus"
+    }
+  ],
+  "generic_name": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "generic_name"
+    },
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "generic_name"
+    }
+  ],
+  "loc_cd_gcc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "loc_cd_gcc"
+    }
+  ],
+  "ndc_no_gcc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ndc_no_gcc"
+    }
+  ],
+  "pr_no": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "pr_no"
+    }
+  ],
+  "pr_no_new": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "pr_no_new"
+    }
+  ],
+  "reg_class_gcc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "reg_class_gcc"
+    }
+  ],
+  "galenic_form_gcc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "galenic_form_gcc"
+    }
+  ],
+  "mdc_case_cnt": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "mdc_case_cnt"
+    }
+  ],
+  "euro_cd": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "euro_cd"
+    }
+  ],
+  "rb_prod_cd": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "rb_prod_cd"
+    }
+  ],
+  "prod_family_gcc_same_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "prod_family_gcc_same_yn"
+    }
+  ],
+  "family_date_added": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "family_date_added"
+    }
+  ],
+  "family_date_modified": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "family_date_modified"
+    }
+  ],
+  "product_date_added": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "product_date_added"
+    }
+  ],
+  "product_date_modified": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "product_date_modified"
+    }
+  ],
+  "ind_rank_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ind_rank_id"
+    }
+  ],
+  "ind_llt_code": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ind_llt_code"
+    }
+  ],
+  "ind_llt": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ind_llt"
+    }
+  ],
+  "ind_pref_term": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ind_pref_term"
+    }
+  ],
+  "ind_pt_code": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ind_pt_code"
+    }
+  ],
+  "reported_indication": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "reported_indication"
+    }
+  ],
+  "ind_code_status": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ind_code_status"
+    }
+  ],
+  "ind_hlt_code": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ind_hlt_code"
+    }
+  ],
+  "drug_reaction_quality_category": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_reaction_quality_category"
+    }
+  ],
+  "qs_e1_rechallenge": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_e1_rechallenge"
+    }
+  ],
+  "qs_e2_negative_latency": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_e2_negative_latency"
+    }
+  ],
+  "qs_e3_mult_pat_lit": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_e3_mult_pat_lit"
+    }
+  ],
+  "qs_01_reporter_hc_pro": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_01_reporter_hc_pro"
+    }
+  ],
+  "qs_02_patient_age": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_02_patient_age"
+    }
+  ],
+  "qs_03_patient_sex": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_03_patient_sex"
+    }
+  ],
+  "qs_04_pat_med_hist": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_04_pat_med_hist"
+    }
+  ],
+  "qs_05_pat_social_hist": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_05_pat_social_hist"
+    }
+  ],
+  "qs_06_pat_lab_data": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_06_pat_lab_data"
+    }
+  ],
+  "qs_07_drug_indication": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_07_drug_indication"
+    }
+  ],
+  "qs_08_drug_outcome": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_08_drug_outcome"
+    }
+  ],
+  "qs_09_drug_start_dt": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_09_drug_start_dt"
+    }
+  ],
+  "qs_10_drug_end_dt": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_10_drug_end_dt"
+    }
+  ],
+  "qs_11_drug_dose_regimen": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_11_drug_dose_regimen"
+    }
+  ],
+  "qs_12_other_drugs": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_12_other_drugs"
+    }
+  ],
+  "qs_13_suspect_drugs": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_13_suspect_drugs"
+    }
+  ],
+  "qs_14_event_start_dt": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_14_event_start_dt"
+    }
+  ],
+  "qs_15_event_end_dt": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_15_event_end_dt"
+    }
+  ],
+  "qs_16_event_outcome": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_16_event_outcome"
+    }
+  ],
+  "qs_17_drug_event_outcome": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_17_drug_event_outcome"
+    }
+  ],
+  "qs_18_drug_event_start_dt": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "qs_18_drug_event_start_dt"
+    }
+  ],
+  "drug_event_quality_category": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_event_quality_category"
+    }
+  ],
+  "onset_delay": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "onset_delay"
+    }
+  ],
+  "onset_delay_seconds": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "onset_delay_seconds"
+    }
+  ],
+  "onset_latency": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "onset_latency"
+    }
+  ],
+  "onset_latency_seconds": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "onset_latency_seconds"
+    }
+  ],
+  "total_dose": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "total_dose"
+    }
+  ],
+  "total_dose_unit": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "total_dose_unit"
+    }
+  ],
+  "important_diagon_flag": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "important_diagon_flag"
+    }
+  ],
+  "more_specific_flag": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "more_specific_flag"
+    }
+  ],
+  "drug_action_taken": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_action_taken"
+    }
+  ],
+  "other_information": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "other_information"
+    }
+  ],
+  "rechallenge_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "rechallenge_ynu"
+    }
+  ],
+  "dechallenge_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "dechallenge_ynu"
+    }
+  ],
+  "ib_listedness_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ib_listedness_ynu"
+    }
+  ],
+  "ccds_listedness_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ccds_listedness_ynu"
+    }
+  ],
+  "uspi_listedness_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "uspi_listedness_ynu"
+    }
+  ],
+  "jppi_listedness_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "jppi_listedness_ynu"
+    }
+  ],
+  "ib_label": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ib_label"
+    }
+  ],
+  "ccds_label": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ccds_label"
+    }
+  ],
+  "uspi_label": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "uspi_label"
+    }
+  ],
+  "jppi_label": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "jppi_label"
+    }
+  ],
+  "lam_assessed_flag": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "lam_assessed_flag"
+    }
+  ],
+  "det_causality": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "det_causality"
+    }
+  ],
+  "det_causality_method": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "det_causality_method"
+    }
+  ],
+  "reporter_casuality": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "reporter_casuality"
+    }
+  ],
+  "rpt_causality_method": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "rpt_causality_method"
+    }
+  ],
+  "prt_causality": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "prt_causality"
+    }
+  ],
+  "prt_causality_method": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "prt_causality_method"
+    }
+  ],
+  "susar_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "susar_yn"
+    }
+  ],
+  "protocol_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "protocol_id"
+    }
+  ],
+  "study_type": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "study_type"
+    }
+  ],
+  "unblinding_status": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "unblinding_status"
+    }
+  ],
+  "broken_by": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "broken_by"
+    }
+  ],
+  "broken_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "broken_date"
+    }
+  ],
+  "blind_name": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "blind_name"
+    }
+  ],
+  "study_desc": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "study_desc"
+    }
+  ],
+  "classification": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "classification"
+    }
+  ],
+  "other_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "other_id"
+    }
+  ],
+  "study_product_generic_name": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "study_product_generic_name"
+    }
+  ],
+  "reporter_occupation": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "reporter_occupation"
+    }
+  ],
+  "reporter_country": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "reporter_country"
+    }
+  ],
+  "case_characteristics": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_characteristics"
+    }
+  ],
+  "date_of_lmp": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "date_of_lmp"
+    }
+  ],
+  "deliver_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "deliver_date"
+    }
+  ],
+  "due_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "due_date"
+    }
+  ],
+  "breastfeeding": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "breastfeeding"
+    }
+  ],
+  "prospective": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "prospective"
+    }
+  ],
+  "number_of_fetus": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "number_of_fetus"
+    }
+  ],
+  "gravida": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "gravida"
+    }
+  ],
+  "para": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "para"
+    }
+  ],
+  "gest_period": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "gest_period"
+    }
+  ],
+  "gest_period_unit": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "gest_period_unit"
+    }
+  ],
+  "preg_at_vaccine": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "preg_at_vaccine"
+    }
+  ],
+  "delivery_type": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "delivery_type"
+    }
+  ],
+  "birth_type": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "birth_type"
+    }
+  ],
+  "fetal_outcome": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "fetal_outcome"
+    }
+  ],
+  "apgar1": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "apgar1"
+    }
+  ],
+  "apgar2": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "apgar2"
+    }
+  ],
+  "apgar3": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "apgar3"
+    }
+  ],
+  "weight_grams": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "weight_grams"
+    }
+  ],
+  "linked_case_flag": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_case_flag"
+    }
+  ],
+  "linked_case_num": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_case_num"
+    }
+  ],
+  "linked_case_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_case_id"
+    }
+  ],
+  "to_case_num": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "to_case_num"
+    }
+  ],
+  "link_type": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "link_type"
+    }
+  ],
+  "lined_case_comments": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "lined_case_comments"
+    }
+  ],
+  "linked_icu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_icu"
+    }
+  ],
+  "linked_non_interventional_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_non_interventional_yn"
+    }
+  ],
+  "linked_protocol_num": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_protocol_num"
+    }
+  ],
+  "linked_site_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_site_id"
+    }
+  ],
+  "linked_case_serious": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_case_serious"
+    }
+  ],
+  "linked_case_death": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_case_death"
+    }
+  ],
+  "linked_events_w_fatal_outcome": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_events_w_fatal_outcome"
+    }
+  ],
+  "linked_prim_src_country": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_prim_src_country"
+    }
+  ],
+  "linked_event_country_occured": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_event_country_occured"
+    }
+  ],
+  "linked_age": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_age"
+    }
+  ],
+  "linked_age_group": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_age_group"
+    }
+  ],
+  "linked_patient_gender": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_patient_gender"
+    }
+  ],
+  "linked_patient_weight_lbs": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_patient_weight_lbs"
+    }
+  ],
+  "linked_ae_preferred_terms": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_ae_preferred_terms"
+    }
+  ],
+  "linked_reported_terms": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_reported_terms"
+    }
+  ],
+  "linked_first_dose_latencies_days": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_first_dose_latencies_days"
+    }
+  ],
+  "linked_last_dose_latencies_days": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_last_dose_latencies_days"
+    }
+  ],
+  "linked_event_dates": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_event_dates"
+    }
+  ],
+  "linked_event_seriousnesses": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_event_seriousnesses"
+    }
+  ],
+  "linked_event_durations_in_days": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_event_durations_in_days"
+    }
+  ],
+  "linked_event_outcomes": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_event_outcomes"
+    }
+  ],
+  "linked_socs": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_socs"
+    }
+  ],
+  "linked_hlgts": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_hlgts"
+    }
+  ],
+  "linked_hlts": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_hlts"
+    }
+  ],
+  "linked_safety_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_safety_date"
+    }
+  ],
+  "linked_rechallenges": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_rechallenges"
+    }
+  ],
+  "linked_dechallenges": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_dechallenges"
+    }
+  ],
+  "linked_drug_indication_pts": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_drug_indication_pts"
+    }
+  ],
+  "linked_drug_reported_indications": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_drug_reported_indications"
+    }
+  ],
+  "linked_dose_formulations": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_dose_formulations"
+    }
+  ],
+  "linked_drug_admin_routes": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_drug_admin_routes"
+    }
+  ],
+  "linked_drug_doses": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_drug_doses"
+    }
+  ],
+  "linked_dose_units": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_dose_units"
+    }
+  ],
+  "linked_dose_frequencies": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_dose_frequencies"
+    }
+  ],
+  "linked_dose_start_dates": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_dose_start_dates"
+    }
+  ],
+  "linked_dose_stop_dates": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_dose_stop_dates"
+    }
+  ],
+  "linked_dose_durations_in_days": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_dose_durations_in_days"
+    }
+  ],
+  "linked_lot_numbers": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_lot_numbers"
+    }
+  ],
+  "linked_med_hist_comments": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_med_hist_comments"
+    }
+  ],
+  "linked_reporter_causalities": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_reporter_causalities"
+    }
+  ],
+  "linked_company_causalities": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_company_causalities"
+    }
+  ],
+  "linked_reporter_types": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_reporter_types"
+    }
+  ],
+  "linked_patient_height_in": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_patient_height_in"
+    }
+  ],
+  "linked_rank1_ae_pref_term": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_rank1_ae_pref_term"
+    }
+  ],
+  "linked_rank1_reported_term": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_rank1_reported_term"
+    }
+  ],
+  "linked_rank1_outcome": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_rank1_outcome"
+    }
+  ],
+  "linked_rank1_serious_ae_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_rank1_serious_ae_yn"
+    }
+  ],
+  "linked_ccds_labels": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_ccds_labels"
+    }
+  ],
+  "linked_ib_labels": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_ib_labels"
+    }
+  ],
+  "linked_jppi_labels": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_jppi_labels"
+    }
+  ],
+  "linked_uspi_labels": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_uspi_labels"
+    }
+  ],
+  "linked_llt_names": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_llt_names"
+    }
+  ],
+  "linked_effective_start_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_effective_start_date"
+    }
+  ],
+  "linked_multiple_patient_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_multiple_patient_yn"
+    }
+  ],
+  "linked_caw_generic_names": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_caw_generic_names"
+    }
+  ],
+  "linked_reported_drug_names": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_reported_drug_names"
+    }
+  ],
+  "linked_all_suspected_drugs": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_all_suspected_drugs"
+    }
+  ],
+  "linked_all_case_drugs": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_all_case_drugs"
+    }
+  ],
+  "linked_primary_suspect_drug": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_primary_suspect_drug"
+    }
+  ],
+  "linked_other_suspect_drugs": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_other_suspect_drugs"
+    }
+  ],
+  "linked_conmeds": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_conmeds"
+    }
+  ],
+  "linked_gcc_prod_names": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_gcc_prod_names"
+    }
+  ],
+  "linked_gcc_prod_fmly_names": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_gcc_prod_fmly_names"
+    }
+  ],
+  "linked_gcc_prod_fmly_codes": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_gcc_prod_fmly_codes"
+    }
+  ],
+  "linked_original_prod_codes": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_original_prod_codes"
+    }
+  ],
+  "linked_gcc_rb_prod_codes": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_gcc_rb_prod_codes"
+    }
+  ],
+  "linked_gcc_reg_classes": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_gcc_reg_classes"
+    }
+  ],
+  "linked_rank1_event_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "linked_rank1_event_date"
+    }
+  ],
+  "case_drug_event_id": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_drug_event_id"
+    }
+  ],
+  "drug_auth_country": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_auth_country"
+    }
+  ],
+  "drug_character_other": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_character_other"
+    }
+  ],
+  "drug_coded_other": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_coded_other"
+    }
+  ],
+  "drug_event_quality_score": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_event_quality_score"
+    }
+  ],
+  "drug_name_other": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_name_other"
+    }
+  ],
+  "drug_rank": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_rank"
+    }
+  ],
+  "drug_reported_other": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_reported_other"
+    }
+  ],
+  "event_cong_nom_ynu": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_cong_nom_ynu"
+    }
+  ],
+  "event_lock_date": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_lock_date"
+    }
+  ],
+  "event_lock_date_s": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_lock_date_s"
+    }
+  ],
+  "event_rank_reaction": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "event_rank_reaction"
+    }
+  ],
+  "family_id_other": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "family_id_other"
+    }
+  ],
+  "generic_name_other": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "generic_name_other"
+    }
+  ],
+  "ime_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "ime_yn"
+    }
+  ],
+  "interval_lock_end_dt": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "interval_lock_end_dt"
+    }
+  ],
+  "interval_lock_end_dt_s": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "interval_lock_end_dt_s"
+    }
+  ],
+  "interval_lock_start_dt": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "interval_lock_start_dt"
+    }
+  ],
+  "interval_lock_start_dt_s": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "interval_lock_start_dt_s"
+    }
+  ],
+  "meddra_version": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "meddra_version"
+    }
+  ],
+  "prod_code_status_other": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "prod_code_status_other"
+    }
+  ],
+  "total_quality_score": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "total_quality_score"
+    }
+  ],
+  "glue_extracted_at": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "glue_extracted_at"
+    },
+    {
+      "table": "sv_lab_details",
+      "alias": "l",
+      "column": "glue_extracted_at"
+    },
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "glue_extracted_at"
+    },
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "glue_extracted_at"
+    }
+  ],
+  "drug_character": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "drug_character"
+    }
+  ],
+  "case_invalid_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "case_invalid_yn"
+    }
+  ],
+  "primary_soc_yn": [
+    {
+      "table": "sv_golden_layer",
+      "alias": "g",
+      "column": "primary_soc_yn"
+    }
+  ],
+  "lab_test_date": [
+    {
+      "table": "sv_lab_details",
+      "alias": "l",
+      "column": "lab_test_date"
+    }
+  ],
+  "lab_test_unit": [
+    {
+      "table": "sv_lab_details",
+      "alias": "l",
+      "column": "lab_test_unit"
+    }
+  ],
+  "normal_high_value": [
+    {
+      "table": "sv_lab_details",
+      "alias": "l",
+      "column": "normal_high_value"
+    }
+  ],
+  "normal_low_value": [
+    {
+      "table": "sv_lab_details",
+      "alias": "l",
+      "column": "normal_low_value"
+    }
+  ],
+  "smartone_category": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "smartone_category"
+    }
+  ],
+  "record_type": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "record_type"
+    }
+  ],
+  "calendar_id_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "calendar_id_med"
+    }
+  ],
+  "rb_prod_cd_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "rb_prod_cd_med"
+    }
+  ],
+  "drug_formulations": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "drug_formulations"
+    }
+  ],
+  "rts_alert_results_id_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "rts_alert_results_id_med"
+    }
+  ],
+  "alert_name_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "alert_name_med"
+    }
+  ],
+  "alert_status_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "alert_status_med"
+    }
+  ],
+  "report_frequency_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "report_frequency_med"
+    }
+  ],
+  "event_type_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "event_type_med"
+    }
+  ],
+  "event_name_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "event_name_med"
+    }
+  ],
+  "curr_start_dt_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "curr_start_dt_med"
+    }
+  ],
+  "curr_end_dt_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "curr_end_dt_med"
+    }
+  ],
+  "due_dt_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "due_dt_med"
+    }
+  ],
+  "cuml_cases_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "cuml_cases_med"
+    }
+  ],
+  "curr_cases_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "curr_cases_med"
+    }
+  ],
+  "alert_type_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "alert_type_med"
+    }
+  ],
+  "tfa_rule_count_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "tfa_rule_count_med"
+    }
+  ],
+  "tfa_rules_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "tfa_rules_med"
+    }
+  ],
+  "bcpnn025_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "bcpnn025_med"
+    }
+  ],
+  "bcpnn_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "bcpnn_med"
+    }
+  ],
+  "new_cases_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "new_cases_med"
+    }
+  ],
+  "fatal_cases_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "fatal_cases_med"
+    }
+  ],
+  "rechallenge_cases_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "rechallenge_cases_med"
+    }
+  ],
+  "serious_cases_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "serious_cases_med"
+    }
+  ],
+  "dme_cases_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "dme_cases_med"
+    }
+  ],
+  "evoi_cases_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "evoi_cases_med"
+    }
+  ],
+  "alert_comments_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "alert_comments_med"
+    }
+  ],
+  "rts_signal_id_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "rts_signal_id_med"
+    }
+  ],
+  "signal_name_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "signal_name_med"
+    }
+  ],
+  "signal_event_type_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "signal_event_type_med"
+    }
+  ],
+  "signal_event_name_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "signal_event_name_med"
+    }
+  ],
+  "signal_dt_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "signal_dt_med"
+    }
+  ],
+  "signal_yn_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "signal_yn_med"
+    }
+  ],
+  "signal_reasons_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "signal_reasons_med"
+    }
+  ],
+  "signal_assessment_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "signal_assessment_med"
+    }
+  ],
+  "calendar_id_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "calendar_id_non_med"
+    }
+  ],
+  "rb_prod_cd_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "rb_prod_cd_non_med"
+    }
+  ],
+  "rts_alert_results_id_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "rts_alert_results_id_non_med"
+    }
+  ],
+  "alert_name_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "alert_name_non_med"
+    }
+  ],
+  "alert_status_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "alert_status_non_med"
+    }
+  ],
+  "report_frequency_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "report_frequency_non_med"
+    }
+  ],
+  "event_type_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "event_type_non_med"
+    }
+  ],
+  "event_name_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "event_name_non_med"
+    }
+  ],
+  "curr_start_dt_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "curr_start_dt_non_med"
+    }
+  ],
+  "curr_end_dt_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "curr_end_dt_non_med"
+    }
+  ],
+  "due_dt_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "due_dt_non_med"
+    }
+  ],
+  "cuml_cases_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "cuml_cases_non_med"
+    }
+  ],
+  "curr_cases_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "curr_cases_non_med"
+    }
+  ],
+  "alert_type_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "alert_type_non_med"
+    }
+  ],
+  "tfa_rule_count_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "tfa_rule_count_non_med"
+    }
+  ],
+  "tfa_rules_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "tfa_rules_non_med"
+    }
+  ],
+  "bcpnn025_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "bcpnn025_non_med"
+    }
+  ],
+  "bcpnn_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "bcpnn_non_med"
+    }
+  ],
+  "new_cases_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "new_cases_non_med"
+    }
+  ],
+  "fatal_cases_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "fatal_cases_non_med"
+    }
+  ],
+  "rechallenge_cases_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "rechallenge_cases_non_med"
+    }
+  ],
+  "serious_cases_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "serious_cases_non_med"
+    }
+  ],
+  "dme_cases_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "dme_cases_non_med"
+    }
+  ],
+  "evoi_cases_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "evoi_cases_non_med"
+    }
+  ],
+  "alert_comments_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "alert_comments_non_med"
+    }
+  ],
+  "rts_signal_id_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "rts_signal_id_non_med"
+    }
+  ],
+  "signal_name_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "signal_name_non_med"
+    }
+  ],
+  "signal_event_type_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "signal_event_type_non_med"
+    }
+  ],
+  "signal_event_name_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "signal_event_name_non_med"
+    }
+  ],
+  "signal_dt_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "signal_dt_non_med"
+    }
+  ],
+  "signal_yn_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "signal_yn_non_med"
+    }
+  ],
+  "signal_reasons_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "signal_reasons_non_med"
+    }
+  ],
+  "signal_assessment_non_med": [
+    {
+      "table": "sv_med_non_med",
+      "alias": "m",
+      "column": "signal_assessment_non_med"
+    }
+  ],
+  "formula_no": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "formula_no"
+    }
+  ],
+  "formula_version": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "formula_version"
+    }
+  ],
+  "raw_item_code": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "raw_item_code"
+    }
+  ],
+  "con_item_code": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "con_item_code"
+    }
+  ],
+  "percent_raw_quantity": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "percent_raw_quantity"
+    }
+  ],
+  "cas_number": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "cas_number"
+    }
+  ],
+  "con_inci_eu": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "con_inci_eu"
+    }
+  ],
+  "con_inci_us": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "con_inci_us"
+    }
+  ],
+  "label_yn": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "label_yn"
+    }
+  ],
+  "raw_inci_eu": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "raw_inci_eu"
+    }
+  ],
+  "raw_inci_us": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "raw_inci_us"
+    }
+  ],
+  "formula_source": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "formula_source"
+    }
+  ],
+  "formula_cnt": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "formula_cnt"
+    }
+  ],
+  "all_formula_no": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "all_formula_no"
+    }
+  ],
+  "labbook_no": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "labbook_no"
+    }
+  ],
+  "con_inci_us_all": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "con_inci_us_all"
+    }
+  ],
+  "con_inci_eu_all": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "con_inci_eu_all"
+    }
+  ],
+  "custom_product_list": [
+    {
+      "table": "sv_product_mapping",
+      "alias": "p",
+      "column": "custom_product_list"
+    }
+  ]
+}
