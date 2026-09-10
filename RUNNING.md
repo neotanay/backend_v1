@@ -46,7 +46,7 @@ aws lambda update-function-code \
 ```
 
 
-### Configuration
+### Configuration -future
 
 ```bash
 aws lambda update-function-configuration \
