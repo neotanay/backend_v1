@@ -511,7 +511,7 @@ def create_app() -> FastAPI:
     return app
 
 app = create_app()
-handler = Mangum(app, lifespan="auto")
+lambda_handler = Mangum(app, lifespan="auto")
 
 
 # if __name__ == "__main__":

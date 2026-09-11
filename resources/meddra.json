@@ -1,0 +1,15 @@
+{
+"HLGT_CODE": "pWidgetHLGTCODE",
+"HLGT_NAME": "pWidgetHLGTNAME",
+"HLT_CODE": "pWidgetHLTCODE",
+"HLT_NAME": "pWidgetHLTNAME",
+"IME": "pWidgetIME",
+"MEDDRA_VERSION": "pWidgetMEDDRAVERSION",
+"PRIMARY_SOC_YN": "pWidgetPRIMARYSOCYN",
+"PT_CODE": "pWidgetPTCODE",
+"PT_NAME": "pWidgetPTNAME",
+"PT_SOC_CODE": "pWidgetPTSOCCODE",
+"SMQ_NAME": "pWidgetSMQNAME",
+"SMQ_NARROW_YN": "pWidgetSMQNARROWYN",
+"SOC_NAME": "pWidgetSOCNAME"
+}
