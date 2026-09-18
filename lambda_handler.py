@@ -74,33 +74,14 @@ def _is_dashboard_owner(email: str) -> bool:
 
 
 def get_org_members_with_owner_flag() -> list[dict]:
-    """ORG_MEMBERS, annotated with isOwner — this is what GET /org-members
-    actually returns, so the frontend can gate "Pending approval" UI and
-    Approve/Reject buttons without hardcoding the owner list itself."""
     return [{**m, "isOwner": _is_dashboard_owner(m["email"])} for m in ORG_MEMBERS]
 
 
 def _resolve_viewer_identity(request: Request) -> str:
-    """The ONE place "who is asking" gets decided. Every handler that needs
-    to know the current viewer (list filtering, ownership checks) calls
-    this — none of them read request.query_params directly.
-
-    TODAY: there's no login, so the frontend just tells us who it is via
-    ?viewer=<email> — an honor system, not a security boundary.
-
-    WHEN SSO ARRIVES: change ONLY the body of this one function to read a
-    verified identity instead (e.g. from a header a real authorizer sets).
-    Every route below already calls this function rather than touching
-    query params itself, and the S3 schema (owner/sharedWith are just email
-    strings) doesn't change at all — so this becomes a one-function edit,
-    not a rearchitect.
-    """
     return (request.query_params.get("viewer") or "").strip().lower()
 
 
 def _resolve_owner_identity(body: dict) -> str:
-    """Same idea as _resolve_viewer_identity(), for the "who is saving
-    this" side (POST /bookmark)."""
     return (body.get("owner") or "").strip().lower()
 
 TEXT_INPUT_COLUMNS = [c.strip() for c in os.getenv("TEXT_INPUT_COLUMNS", "").split(",") if c.strip()]
@@ -347,12 +328,6 @@ def create_app() -> FastAPI:
         created_at = datetime.now(UTC).isoformat()
         bookmark_id = uuid.uuid4().hex[:12]
         key = f"{BOOKMARKS_PREFIX}{bookmark_id}.json"
-        # NEW: every bookmark starts "private" (owner-only) until
-        # explicitly shared/submitted — see post_bookmark_share and
-        # post_bookmark_community_submit below. Bookmarks saved before
-        # this change have no "visibility" field at all; get_bookmarks()
-        # below treats a MISSING visibility as "public" so nothing that
-        # used to be visible to everyone silently disappears.
         await run_in_threadpool(
             s3_client.put_object,
             Bucket=S3_BUCKET_NAME,
@@ -479,12 +454,6 @@ def create_app() -> FastAPI:
 
     @app.post("/bookmark/share")
     async def post_bookmark_share(request: Request):
-        """Set who can see this bookmark in the "My Bookmarks" LIST — POST
-        /bookmark/share with {id, visibility: "public"|"private",
-        sharedWith: [emails]}. This does NOT gate the direct "?bm=<id>"
-        open link — someone who already has that exact link can still
-        open it regardless of visibility; this only controls whether a
-        bookmark shows up when OTHER people browse the list."""
         try:
             body = await request.json()
         except Exception:
@@ -531,12 +500,6 @@ def create_app() -> FastAPI:
 
     @app.post("/bookmark/community/submit")
     async def post_bookmark_community_submit(request: Request):
-        """A bookmark's owner submits it for community review — POST
-        /bookmark/community/submit with {id, requester}. Only the
-        bookmark's actual owner can submit it (checked against the stored
-        `owner`, not just trusted from the request). This sets
-        communityStatus to "pending" without changing visibility; it only
-        becomes public once a dashboard owner approves it."""
         try:
             body = await request.json()
         except Exception:
@@ -574,20 +537,6 @@ def create_app() -> FastAPI:
 
     @app.post("/bookmark/community/decide")
     async def post_bookmark_community_decide(request: Request):
-        """A dashboard owner approves or rejects a pending community
-        submission — POST /bookmark/community/decide with {id, decision:
-        "approve"|"reject", reviewer}. `reviewer` must be in
-        DASHBOARD_OWNERS (checked server-side, not just trusted from the
-        request body) — this is the actual gate that makes "only the
-        safety-view owner can publish a community bookmark" real.
-
-        Approving sets visibility="public" AND communityStatus="approved"
-        — from that point it behaves like any other public bookmark for
-        get_bookmarks(), plus the frontend shows a distinct "✓ Community"
-        badge for anything approved instead of the plain "Public" badge.
-        Rejecting leaves visibility untouched and just marks
-        communityStatus="rejected" so the original owner sees the outcome;
-        they can re-submit later."""
         try:
             body = await request.json()
         except Exception:
@@ -636,11 +585,6 @@ def create_app() -> FastAPI:
 
     @app.get("/org-members")
     async def get_org_members():
-        """Powers the "search your name" identity picker, the "share with
-        these people" checklist, and (via isOwner) which identities can
-        see/act on the "Pending approval" section. Edit ORG_MEMBERS and
-        DASHBOARD_OWNERS near the top of this file; nothing here needs to
-        change when either list changes."""
         return {"members": get_org_members_with_owner_flag()}
 
     @app.get("/bookmarks")
@@ -649,18 +593,6 @@ def create_app() -> FastAPI:
         page: int = Query(1, ge=1),
         page_size: int = Query(20, ge=1, le=100)
     ):
-        """NEW: filtered server-side by _resolve_viewer_identity(request) —
-        a bookmark is included only if it's "public", OR the viewer owns
-        it, OR the viewer's email is in its sharedWith list, OR it's
-        sitting at communityStatus "pending" and the viewer is a dashboard
-        owner (so "Submit for Community" requests actually reach them for
-        review). Everything else is left out of the response entirely, not
-        just hidden client-side.
-
-        Bookmarks saved before this feature existed have no "visibility"
-        field at all — those are treated as "public" (the .get() default
-        below) so nothing that used to be visible to everyone silently
-        disappears."""
         viewer = _resolve_viewer_identity(request)
         bookmarks = []
 
