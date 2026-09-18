@@ -45,6 +45,64 @@ S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME", "")
 BOOKMARKS_PREFIX = os.getenv("BOOKMARKS_PREFIX", "bookmarks/")
 QS_SESSION_LIFETIME_MINUTES = int(os.getenv("QS_SESSION_LIFETIME_MINUTES", 600))
 DEFAULT_BOOKMARK_NAME = os.environ.get("DEFAULT_BOOKMARK_NAME", "Untitled bookmark")
+
+# ── Fixed org-member directory ────────────────────────────────────────────
+# Hardcoded per request (not pulled from a directory service). Powers the
+# "search your name" identity picker and the "share with these people"
+# checklist in the frontend. `email` is the value actually stored as a
+# bookmark's `owner` and inside `sharedWith` — treat it as a stable id, not
+# just a display string.
+ORG_MEMBERS: list[dict] = [
+    {"name": "Sachin Aggarwal", "email": "saggar03@kenvue.com"},
+    {"name": "Aniket Agrawal", "email": "aagraw08@kenvue.com"},
+    # >>> Placeholder — replace with the real dashboard owner's name/email <<<
+    {"name": "John Doe", "email": "jdoe@kenvue.com"},
+]
+_ORG_MEMBER_EMAILS: set[str] = {m["email"].strip().lower() for m in ORG_MEMBERS}
+
+# ── Dashboard owner(s) ─────────────────────────────────────────────────────
+# The only identity/identities allowed to approve or reject a "Submit for
+# Community" request (see post_bookmark_community_decide below). A set
+# supports more than one owner without an API shape change.
+# >>> REPLACE "jdoe@kenvue.com" with the real owner email(s) — this is a
+# placeholder for John Doe above, not a real address <<<
+DASHBOARD_OWNERS: set[str] = {"jdoe@kenvue.com"}
+
+
+def _is_dashboard_owner(email: str) -> bool:
+    return bool(email) and email.strip().lower() in DASHBOARD_OWNERS
+
+
+def get_org_members_with_owner_flag() -> list[dict]:
+    """ORG_MEMBERS, annotated with isOwner — this is what GET /org-members
+    actually returns, so the frontend can gate "Pending approval" UI and
+    Approve/Reject buttons without hardcoding the owner list itself."""
+    return [{**m, "isOwner": _is_dashboard_owner(m["email"])} for m in ORG_MEMBERS]
+
+
+def _resolve_viewer_identity(request: Request) -> str:
+    """The ONE place "who is asking" gets decided. Every handler that needs
+    to know the current viewer (list filtering, ownership checks) calls
+    this — none of them read request.query_params directly.
+
+    TODAY: there's no login, so the frontend just tells us who it is via
+    ?viewer=<email> — an honor system, not a security boundary.
+
+    WHEN SSO ARRIVES: change ONLY the body of this one function to read a
+    verified identity instead (e.g. from a header a real authorizer sets).
+    Every route below already calls this function rather than touching
+    query params itself, and the S3 schema (owner/sharedWith are just email
+    strings) doesn't change at all — so this becomes a one-function edit,
+    not a rearchitect.
+    """
+    return (request.query_params.get("viewer") or "").strip().lower()
+
+
+def _resolve_owner_identity(body: dict) -> str:
+    """Same idea as _resolve_viewer_identity(), for the "who is saving
+    this" side (POST /bookmark)."""
+    return (body.get("owner") or "").strip().lower()
+
 TEXT_INPUT_COLUMNS = [c.strip() for c in os.getenv("TEXT_INPUT_COLUMNS", "").split(",") if c.strip()]
 CACHE_TTL_SECONDS = int(os.getenv("CACHE_TTL_SECONDS", "3600"))
 HIGH_CARDINALITY_THRESHOLD = int(os.getenv("HIGH_CARDINALITY_THRESHOLD", 100))
@@ -281,20 +339,42 @@ def create_app() -> FastAPI:
         
         encrypted = body.get("encrypted")
         name = body.get("name").strip() or DEFAULT_BOOKMARK_NAME
+        # NEW: see _resolve_owner_identity() above — this is the one line
+        # that changes when real SSO replaces the client-supplied "owner".
+        owner = _resolve_owner_identity(body)
         if not encrypted:
             return JSONResponse(status_code=400, content={"error": "No data"})
         created_at = datetime.now(UTC).isoformat()
         bookmark_id = uuid.uuid4().hex[:12]
         key = f"{BOOKMARKS_PREFIX}{bookmark_id}.json"
+        # NEW: every bookmark starts "private" (owner-only) until
+        # explicitly shared/submitted — see post_bookmark_share and
+        # post_bookmark_community_submit below. Bookmarks saved before
+        # this change have no "visibility" field at all; get_bookmarks()
+        # below treats a MISSING visibility as "public" so nothing that
+        # used to be visible to everyone silently disappears.
         await run_in_threadpool(
             s3_client.put_object,
             Bucket=S3_BUCKET_NAME,
             Key=key,
-            Body=json.dumps({"encrypted": encrypted, "name": name, "iv": body.get("iv"), "createdAt": created_at}),
+            Body=json.dumps({
+                "encrypted": encrypted,
+                "name": name,
+                "iv": body.get("iv"),
+                "createdAt": created_at,
+                "owner": owner,
+                "visibility": "private",
+                "sharedWith": [],
+                "communityStatus": "none",
+            }),
             ContentType="application/json",
         )
         logger.info(f"Bookmark saved: {bookmark_id}")
-        return {"id": bookmark_id, "name": name, "createdAt": created_at}
+        return {
+            "id": bookmark_id, "name": name, "createdAt": created_at,
+            "owner": owner, "visibility": "private", "sharedWith": [],
+            "communityStatus": "none",
+        }
 
     @app.get("/bookmark")
     async def get_bookmark(request: Request):
@@ -396,12 +476,192 @@ def create_app() -> FastAPI:
             "deleted": True,
             "id": id
         }
-    
+
+    @app.post("/bookmark/share")
+    async def post_bookmark_share(request: Request):
+        """Set who can see this bookmark in the "My Bookmarks" LIST — POST
+        /bookmark/share with {id, visibility: "public"|"private",
+        sharedWith: [emails]}. This does NOT gate the direct "?bm=<id>"
+        open link — someone who already has that exact link can still
+        open it regardless of visibility; this only controls whether a
+        bookmark shows up when OTHER people browse the list."""
+        try:
+            body = await request.json()
+        except Exception:
+            body = None
+        if not isinstance(body, dict):
+            return JSONResponse(status_code=400, content={"error": "Invalid body"})
+
+        bookmark_id = str(body.get("id") or "").strip()
+        if not bookmark_id or not re.fullmatch(r"[A-Za-z0-9]+", bookmark_id):
+            return JSONResponse(status_code=400, content={"error": "Invalid bookmark id"})
+
+        visibility = str(body.get("visibility") or "").strip().lower()
+        if visibility not in ("public", "private"):
+            return JSONResponse(status_code=400, content={"error": "visibility must be 'public' or 'private'"})
+
+        shared_with_raw = body.get("sharedWith") or []
+        if not isinstance(shared_with_raw, list):
+            return JSONResponse(status_code=400, content={"error": "sharedWith must be a list"})
+        shared_with = sorted({
+            e.strip().lower() for e in shared_with_raw
+            if isinstance(e, str) and e.strip().lower() in _ORG_MEMBER_EMAILS
+        })
+
+        key = f"{BOOKMARKS_PREFIX}{bookmark_id}.json"
+        try:
+            obj = await run_in_threadpool(s3_client.get_object, Bucket=S3_BUCKET_NAME, Key=key)
+            data = json.loads(await run_in_threadpool(obj["Body"].read))
+        except ClientError as err:
+            code = err.response.get("Error", {}).get("Code", "")
+            status = err.response.get("ResponseMetadata", {}).get("HTTPStatusCode")
+            if code == "NoSuchKey" or status == 404:
+                return JSONResponse(status_code=404, content={"error": "Bookmark not found"})
+            raise
+
+        data["visibility"] = visibility
+        data["sharedWith"] = shared_with if visibility == "private" else []
+        await run_in_threadpool(
+            s3_client.put_object, Bucket=S3_BUCKET_NAME, Key=key,
+            Body=json.dumps(data), ContentType="application/json",
+        )
+
+        logger.info("Bookmark %s sharing updated: visibility=%s sharedWith=%s", bookmark_id, visibility, data["sharedWith"])
+        return {"id": bookmark_id, "visibility": data["visibility"], "sharedWith": data["sharedWith"]}
+
+    @app.post("/bookmark/community/submit")
+    async def post_bookmark_community_submit(request: Request):
+        """A bookmark's owner submits it for community review — POST
+        /bookmark/community/submit with {id, requester}. Only the
+        bookmark's actual owner can submit it (checked against the stored
+        `owner`, not just trusted from the request). This sets
+        communityStatus to "pending" without changing visibility; it only
+        becomes public once a dashboard owner approves it."""
+        try:
+            body = await request.json()
+        except Exception:
+            body = None
+        if not isinstance(body, dict):
+            return JSONResponse(status_code=400, content={"error": "Invalid body"})
+
+        bookmark_id = str(body.get("id") or "").strip()
+        if not bookmark_id or not re.fullmatch(r"[A-Za-z0-9]+", bookmark_id):
+            return JSONResponse(status_code=400, content={"error": "Invalid bookmark id"})
+        requester = str(body.get("requester") or "").strip().lower()
+
+        key = f"{BOOKMARKS_PREFIX}{bookmark_id}.json"
+        try:
+            obj = await run_in_threadpool(s3_client.get_object, Bucket=S3_BUCKET_NAME, Key=key)
+            data = json.loads(await run_in_threadpool(obj["Body"].read))
+        except ClientError as err:
+            code = err.response.get("Error", {}).get("Code", "")
+            status = err.response.get("ResponseMetadata", {}).get("HTTPStatusCode")
+            if code == "NoSuchKey" or status == 404:
+                return JSONResponse(status_code=404, content={"error": "Bookmark not found"})
+            raise
+
+        owner = (data.get("owner") or "").strip().lower()
+        if not requester or requester != owner:
+            return JSONResponse(status_code=403, content={"error": "Only the bookmark's owner can submit it for community review"})
+
+        data["communityStatus"] = "pending"
+        await run_in_threadpool(
+            s3_client.put_object, Bucket=S3_BUCKET_NAME, Key=key,
+            Body=json.dumps(data), ContentType="application/json",
+        )
+        logger.info("Bookmark %s submitted for community review by %s", bookmark_id, requester)
+        return {"id": bookmark_id, "communityStatus": "pending"}
+
+    @app.post("/bookmark/community/decide")
+    async def post_bookmark_community_decide(request: Request):
+        """A dashboard owner approves or rejects a pending community
+        submission — POST /bookmark/community/decide with {id, decision:
+        "approve"|"reject", reviewer}. `reviewer` must be in
+        DASHBOARD_OWNERS (checked server-side, not just trusted from the
+        request body) — this is the actual gate that makes "only the
+        safety-view owner can publish a community bookmark" real.
+
+        Approving sets visibility="public" AND communityStatus="approved"
+        — from that point it behaves like any other public bookmark for
+        get_bookmarks(), plus the frontend shows a distinct "✓ Community"
+        badge for anything approved instead of the plain "Public" badge.
+        Rejecting leaves visibility untouched and just marks
+        communityStatus="rejected" so the original owner sees the outcome;
+        they can re-submit later."""
+        try:
+            body = await request.json()
+        except Exception:
+            body = None
+        if not isinstance(body, dict):
+            return JSONResponse(status_code=400, content={"error": "Invalid body"})
+
+        bookmark_id = str(body.get("id") or "").strip()
+        if not bookmark_id or not re.fullmatch(r"[A-Za-z0-9]+", bookmark_id):
+            return JSONResponse(status_code=400, content={"error": "Invalid bookmark id"})
+
+        decision = str(body.get("decision") or "").strip().lower()
+        if decision not in ("approve", "reject"):
+            return JSONResponse(status_code=400, content={"error": "decision must be 'approve' or 'reject'"})
+
+        reviewer = str(body.get("reviewer") or "").strip().lower()
+        if not _is_dashboard_owner(reviewer):
+            return JSONResponse(status_code=403, content={"error": "Only the safety-view owner can approve or reject a community submission"})
+
+        key = f"{BOOKMARKS_PREFIX}{bookmark_id}.json"
+        try:
+            obj = await run_in_threadpool(s3_client.get_object, Bucket=S3_BUCKET_NAME, Key=key)
+            data = json.loads(await run_in_threadpool(obj["Body"].read))
+        except ClientError as err:
+            code = err.response.get("Error", {}).get("Code", "")
+            status = err.response.get("ResponseMetadata", {}).get("HTTPStatusCode")
+            if code == "NoSuchKey" or status == 404:
+                return JSONResponse(status_code=404, content={"error": "Bookmark not found"})
+            raise
+
+        if data.get("communityStatus") != "pending":
+            return JSONResponse(status_code=409, content={"error": "This bookmark is not awaiting review"})
+
+        if decision == "approve":
+            data["visibility"] = "public"
+            data["communityStatus"] = "approved"
+        else:
+            data["communityStatus"] = "rejected"
+
+        await run_in_threadpool(
+            s3_client.put_object, Bucket=S3_BUCKET_NAME, Key=key,
+            Body=json.dumps(data), ContentType="application/json",
+        )
+        logger.info("Bookmark %s community decision by %s: %s", bookmark_id, reviewer, decision)
+        return {"id": bookmark_id, "visibility": data["visibility"], "communityStatus": data["communityStatus"]}
+
+    @app.get("/org-members")
+    async def get_org_members():
+        """Powers the "search your name" identity picker, the "share with
+        these people" checklist, and (via isOwner) which identities can
+        see/act on the "Pending approval" section. Edit ORG_MEMBERS and
+        DASHBOARD_OWNERS near the top of this file; nothing here needs to
+        change when either list changes."""
+        return {"members": get_org_members_with_owner_flag()}
+
     @app.get("/bookmarks")
     async def get_bookmarks(
+        request: Request,
         page: int = Query(1, ge=1),
         page_size: int = Query(20, ge=1, le=100)
     ):
+        """NEW: filtered server-side by _resolve_viewer_identity(request) —
+        a bookmark is included only if it's "public", OR the viewer owns
+        it, OR the viewer's email is in its sharedWith list, OR it's
+        sitting at communityStatus "pending" and the viewer is a dashboard
+        owner (so "Submit for Community" requests actually reach them for
+        review). Everything else is left out of the response entirely, not
+        just hidden client-side.
+
+        Bookmarks saved before this feature existed have no "visibility"
+        field at all — those are treated as "public" (the .get() default
+        below) so nothing that used to be visible to everyone silently
+        disappears."""
+        viewer = _resolve_viewer_identity(request)
         bookmarks = []
 
         try:
@@ -431,11 +691,29 @@ def create_app() -> FastAPI:
                         )
                         continue
 
+                    visibility = data.get("visibility") or "public"
+                    owner = (data.get("owner") or "").strip().lower()
+                    shared_with = {e.strip().lower() for e in (data.get("sharedWith") or [])}
+                    community_status = data.get("communityStatus") or "none"
+
+                    visible = (
+                        visibility == "public"
+                        or (viewer and viewer == owner)
+                        or (viewer and viewer in shared_with)
+                        or (community_status == "pending" and _is_dashboard_owner(viewer))
+                    )
+                    if not visible:
+                        continue
+
                     bookmarks.append({
                         "id": bookmark_id,
                         "name": data.get("name") or DEFAULT_BOOKMARK_NAME,
                         "createdAt": data.get("createdAt")
                             or obj_summary["LastModified"].isoformat(),
+                        "owner": data.get("owner") or "",
+                        "visibility": visibility,
+                        "sharedWith": sorted(shared_with),
+                        "communityStatus": community_status,
                     })
 
         except ClientError:
